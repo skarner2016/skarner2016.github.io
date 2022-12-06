@@ -1,0 +1,4 @@
+deploy:
+  type: git
+  repo: https://github.com/skarner2016/skarner2016.github.io
+  branch: gh-pages
