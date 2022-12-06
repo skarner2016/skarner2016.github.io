@@ -2,9 +2,6 @@
 title: MySQL主从同步
 date: 2022-08-06 17:57:10
 tags:
-- MySQL
-  categories:
-- MySQL
 ---
 
 
