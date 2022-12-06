@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>MySQL规范 | Skarner2016</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.命名规范1.1 库名、表名、字段必须使用小写，以下划线分隔，需见名知意1.2 一般不超过32个字符，不使用MySQL保留字1.3 临时库、表，必须以tmp为前缀，以日期为后缀1.4 备份库、表，必须以bak为前缀，以日期为后缀1.5 使用utf8mb4字符集，一般使用 utf8mb4_general_ci(5.7)&#x2F;utf8mb4_0900_ai_ci（8.0） 为字符集 2.设计规范2.1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL规范">
+<meta property="og:url" content="http://example.com/2022/07/13/MySQL%20Standard/index.html">
+<meta property="og:site_name" content="Skarner2016">
+<meta property="og:description" content="1.命名规范1.1 库名、表名、字段必须使用小写，以下划线分隔，需见名知意1.2 一般不超过32个字符，不使用MySQL保留字1.3 临时库、表，必须以tmp为前缀，以日期为后缀1.4 备份库、表，必须以bak为前缀，以日期为后缀1.5 使用utf8mb4字符集，一般使用 utf8mb4_general_ci(5.7)&#x2F;utf8mb4_0900_ai_ci（8.0） 为字符集 2.设计规范2.1">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-07-13T11:27:18.000Z">
+<meta property="article:modified_time" content="2022-12-06T11:22:45.965Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Skarner2016" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Skarner2016</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-MySQL Standard" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/07/13/MySQL%20Standard/" class="article-date">
+  <time datetime="2022-07-13T11:27:18.000Z" itemprop="datePublished">2022-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL规范
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-命名规范"><a href="#1-命名规范" class="headerlink" title="1.命名规范"></a>1.命名规范</h4><p>1.1 库名、表名、字段必须使用小写，以下划线分隔，需见名知意<br>1.2 一般不超过32个字符，不使用MySQL保留字<br>1.3 临时库、表，必须以tmp为前缀，以日期为后缀<br>1.4 备份库、表，必须以bak为前缀，以日期为后缀<br>1.5 使用utf8mb4字符集，一般使用 utf8mb4_general_ci(5.7)/utf8mb4_0900_ai_ci（8.0） 为字符集</p>
+<h4 id="2-设计规范"><a href="#2-设计规范" class="headerlink" title="2.设计规范"></a>2.设计规范</h4><p>2.1 所有表必须有主键，并以id命名，不使用uuid做索引，建议使用自增ID或发号器<br>2.2 时间、日期统一使用 datetime(YYYY-MM-DD HH:II:SS)<br>2.3 拆分大字段、访问频率低的字段，分离冷热数据<br>2.4 禁止使用分区表<br>2.5 字段不可定义为 NULL<br>2.6 非必要，不分表（一般表3年数据量低于千万级，无需分表，日志、操作记录类表，根据增量按年、月、周分表）<br>2.7 浮点数用 decimal 存储<br>2.8 不可使用枚举字段，用UNSIGNED TINYINT/UNSIGNED INT替代，并备注各自含义<br>2.9 数据库中不允许存储大文件、图片，存储到OSS中<br>2.10 ip地址存储INT,而非CHAR<br>2.11 禁止使用外键<br>2.12 敏感数据禁止明文存储，如密码</p>
+<h4 id="3-索引规范"><a href="#3-索引规范" class="headerlink" title="3.索引规范"></a>3.索引规范</h4><p>3.1 索引数量不可过多，单张表不超过5个 （索引过多，占据过多空间）<br>3.2 单个索引中字段不可超过5个<br>3.3 索引建议<br>3.3.1 常用的WHERE条件的字段<br>3.3.2 常用的ORDER BY字段<br>3.3.3 常用的GROUP BY字段<br>3.3.4 常用的DISTINCT字段<br>3.3.5 索引的选择性值低的字段(20%)，不建议建立索引，如性别<br>3.4 索引命名，主键pk_，唯一索引uk_, 普通索引idx_<br>3.5 非特殊情况，否则禁止使用 force index</p>
+<h4 id="4-SQL规范"><a href="#4-SQL规范" class="headerlink" title="4.SQL规范"></a>4.SQL规范</h4><p>4.1 复杂SQL，尽可能拆成小的、简单的SQL<br>4.2 尽量避免使用触发器、函数、存储过程<br>4.3 尽量避免在数据库中进行数学运算 (将导致索引不可用)<br>4.4 尽量用 IN() 代替 OR （IN中的元素较少时）<br>4.5 IN 中元素的个数尽量少于500个<br>4.6 尽量避免使用JOIN<br>4.7 禁止使用 ORDER BY RAND()</p>
+<h4 id="5-索引不生效的情况"><a href="#5-索引不生效的情况" class="headerlink" title="5.索引不生效的情况"></a>5.索引不生效的情况</h4><p>5.1 索引使用了运算<br>5.2 索引使用了!=、 &lt;&gt;、 NOT NULL<br>5.3 索引的类型和查询类型不一致 (MySQL有隐式转换，有可能用不到索引)<br>5.4 LIKE “%word” 和 LIKE “%word%”<br>5.5 联合索引A-B-C，只有A、AB、ABC可能用到，WHERE A=x1 AND B &gt; x2 AND C=x3,只能用到A-B</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/13/MySQL%20Standard/" data-id="clbc4u6sb0001c2os7n875zr8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/08/06/MySQL%20Replication/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MySQL主从同步
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/11/29/Redis%20Standard/">Redis规范</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/09/Ubuntu%20Install%20PHP8/">ubuntu安装php8.x</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/06/MySQL%20Replication/">MySQL主从同步</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/13/MySQL%20Standard/">MySQL规范</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
