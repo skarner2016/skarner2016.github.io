@@ -34,7 +34,7 @@ services:
 #### 1.启动 MySQL1
 
 ```
-docker-compose up -d
+docker-compose -f docker-compose-mysql up -d
 ```
 
 #### 2.修改 MySQL 主从配置，并重启
