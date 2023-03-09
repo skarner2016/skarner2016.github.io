@@ -14,7 +14,7 @@ categories:
 ```
 
 #### 2.目录结构
-[代码地址]<https://github.com/skarner2016/go-grpc>
+[gitub 地址](https://github.com/skarner2016/go-grpc)
 ```
 tree
 .
