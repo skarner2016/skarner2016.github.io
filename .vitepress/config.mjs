@@ -48,6 +48,7 @@ export default defineConfig({
         dateStyle: 'full',
         timeStyle: 'medium'
       }
-    }
+    },
+    base: '/'
   }
 })
