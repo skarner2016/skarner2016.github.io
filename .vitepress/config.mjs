@@ -44,7 +44,7 @@ export default defineConfig({
       }
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/skarner2016' }
     ],
     search: {
       provider: 'local'
@@ -56,6 +56,6 @@ export default defineConfig({
         timeStyle: 'medium'
       }
     },
-    base: '/'
+    docFooter: { prev: '上一篇', next: '下一篇' },
   }
 })
