@@ -1,12 +1,8 @@
----
-title: MySQL主从同步
-date: 2022-08-06 17:57:10
----
+# MySQL主从同步 {#mysql-replication}
 
+## 准备 docker-compose-mysql.yml
 
-##### 0.准备 docker-compose-mysql.yml
-
-```
+```yml
 version: "3"
 services:
   mysql1:
@@ -30,13 +26,7 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
 ```
 
-#### 1.启动 MySQL1
-
-```
-docker-compose -f docker-compose-mysql up -d
-```
-
-#### 2.修改 MySQL 主从配置，并重启
+## 修改 MySQL 主从配置，并重启
 
 ```
 # 默认目录: /etc/mysql/my.cnf
@@ -58,7 +48,7 @@ binlog-do-db=notify1
 binlog-ignore-db=mysql
 ```
 
-##### 3.登录主库，创建主从同步的用户
+## 登录主库，创建主从同步的用户
 
 ```
 # 创建用户
@@ -69,13 +59,13 @@ GRANT ALL PRIVILEGES ON *.* TO 'slave'@'%' WITH GRANT OPTION;
 flush privileges;
 ```
 
-##### 4.查看主库状态
+## 查看主库状态
 
 ```
 show master status; # 记录 File，如：mysql-bin.000001
 ```
 
-##### 5.进入从库，配置主库
+## 进入从库，配置主库
 
 ```
 change master to master_host='mysql1',      # 主库地址
@@ -86,7 +76,7 @@ master_log_file='mysql-bin.000001',         # 主库的 binlog （第四步可�
 master_log_pos=1;                           # 从XX开始同步主库
 ```
 
-##### 6.开启 slave，查看状态
+## 开启 slave，查看状态
 
 ```
 start slave;
@@ -95,7 +85,7 @@ show slave status \G                      # 查看是否有错误，正常情况
 
 ```
 
-##### 7.在主库建表，查看从库是否同步创建
+## 在主库建表，查看从库是否同步创建
 
 ```
 CREATE TABLE `users` (

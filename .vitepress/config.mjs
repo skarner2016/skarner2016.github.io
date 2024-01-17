@@ -5,6 +5,13 @@ export default defineConfig({
   title: "skarner",
   description: "skarner's website",
   srcDir: './src',
+  base: '/',
+  markdown: {
+    image: {
+      // 默认禁用图片懒加载
+      lazyLoading: true
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // logo: '/logo.webp',
@@ -18,21 +25,21 @@ export default defineConfig({
       {
         text: 'MySQL',
         items: [
-          { text: 'Replication', link: '/mysql/replication' },
-          { text: 'Standard', link: '/mysql/standard' }
+          { text: '使用规范', link: '/mysql/standard' },
+          { text: '主从同步', link: '/mysql/replication' },
         ]
       },
       {
         text: 'Redis',
         items: [
-          { text: 'Standard', link: '/redis/standard' },
+          { text: '使用规范', link: '/redis/standard' },
         ]
       },
       {
         text: 'Linux',
         items: [
-          { text: 'Ubuntu Install PHP8', link: '/linux/install-php8-on-ubuntu' },
-          { text: 'Command Alias', link: '/linux/alias' },
+          { text: 'Ubuntu安装PHP8', link: '/linux/install-php8-on-ubuntu' },
+          { text: '自定义命令别名', link: '/linux/alias' },
         ]
       }
     ],
