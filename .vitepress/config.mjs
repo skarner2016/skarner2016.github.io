@@ -51,6 +51,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '使用规范', link: '/mysql/standard' },
+          { text: '索引失效', link: '/mysql/index_invalid' },
+          { text: 'MySQL count()函数', link: '/mysql/count' },
           { text: '主从同步', link: '/mysql/replication' },
         ]
       },

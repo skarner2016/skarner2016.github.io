@@ -26,26 +26,43 @@ features:
     link: /mysql/replication
     details: MySQL主从同步的配置
     # linkText: MySQL主从同步
+
   - icon:
       src: /images/icon/mysql.svg
     title: MySQL命名规范
     link: /mysql/standard
     details: MySQL库、表、字段、索引的命名规范
+
+  - icon:
+      src: /images/icon/mysql.svg
+    title: MySQL索引失效
+    link: /mysql/index_invalid
+    details: MySQL索引失效的情况
+
+  - icon:
+      src: /images/icon/mysql.svg
+    title: MySQL count()函数
+    link: /mysql/count
+    details: MySQL count(*)、count(1)、count(id)、count(other)效率对比
+
   - icon:
       src: /images/icon/redis.svg
     title: Redis命名规范
     link: /redis/standard
     details: Redis命名规范
+
   - icon:
       src: /images/icon/linux.svg
     title: Ubuntu安装PHP8
     link: linux/install-php8-on-ubuntu
     details: Ubuntu安装PHP8及扩展的详细步骤
+
   - icon:
       src: /images/icon/linux.svg
     title: Linux命令的别名
     link: linux/alias
     details: Linux命令的别名,包含git、docker等
+
   - icon:
       src: /images/icon/php.svg
     title: PHP8-JIT
