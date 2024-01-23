@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "skarner",
   description: "skarner's website",
-  srcDir: './src',
+  // srcDir: './src',
   base: '/',
   markdown: {
     image: {
