@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "skarner",
   description: "skarner's website",
-  // srcDir: './src',
+  srcDir: './src',
   base: '/',
   markdown: {
     image: {
@@ -34,9 +34,21 @@ export default defineConfig({
         gtag('config', 'GTM-NZ4G5TGH');`
       ]
     ],
+    footer: {
+      message: 'Powered by <a href="https://vitepress.dev/">Vitepress</a>.',
+      copyright: 'Copyright © 2019-present <a href="https://github.com/skarner2016">Skarner</a>'
+    },
     sidebar: [
       {
+        text: 'PHP',
+        collapsed: false,
+        items: [
+          { text: 'PHP8-JIT简介', link: '/php/jit' },
+        ]
+      },
+      {
         text: 'MySQL',
+        collapsed: false,
         items: [
           { text: '使用规范', link: '/mysql/standard' },
           { text: '主从同步', link: '/mysql/replication' },
@@ -44,12 +56,14 @@ export default defineConfig({
       },
       {
         text: 'Redis',
+        collapsed: false,
         items: [
           { text: '使用规范', link: '/redis/standard' },
         ]
       },
       {
         text: 'Linux',
+        collapsed: false,
         items: [
           { text: 'Ubuntu安装PHP8', link: '/linux/install-php8-on-ubuntu' },
           { text: '自定义命令别名', link: '/linux/alias' },

@@ -46,5 +46,10 @@ features:
     title: Linux命令的别名
     link: linux/alias
     details: Linux命令的别名,包含git、docker等
+  - icon:
+      src: /images/icon/php.svg
+    title: PHP8-JIT
+    link: php/jit
+    details: PHP8-JIT简介
 ---
 

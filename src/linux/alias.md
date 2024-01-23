@@ -1,7 +1,7 @@
 # 自定义命令别名
 
+## git
 ```
-# git
 alias g="git"
 alias gst="git status"
 alias gsts="git status -s"
@@ -36,14 +36,18 @@ alias gm="git merge"
 alias grsh="git reset"
 alias grsh="git reset HEAD"
 alias grshh="git reset HEAD --hard"
+```
 
-#php
+## php
+```
 alias art="php artisan"
 alias webman="php webman"
 alias webman_start="php start.php start"
-
-# docker
+```
+## docker
+```
 alias dc="docker-compose"
 alias de="docker exec"
 alias docker-ip="docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
 alias do="docker"
+```
