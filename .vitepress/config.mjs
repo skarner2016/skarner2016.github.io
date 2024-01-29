@@ -28,10 +28,14 @@ export default defineConfig({
       [
         'script',
         {},
-        `window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GTM-NZ4G5TGH');`
+        `
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?f43715192be90c17a095ac8388770b67";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+          `
       ]
     ],
     footer: {
