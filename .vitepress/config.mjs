@@ -22,20 +22,15 @@ export default defineConfig({
     ],
     head: [
       [
-        'script',
-        { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=GTM-NZ4G5TGH' }
-      ],
-      [
-        'script',
-        {},
-        `
+        'script', {}, `
         var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
           hm.src = "https://hm.baidu.com/hm.js?f43715192be90c17a095ac8388770b67";
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
-          `
+        })();
+        `
       ]
     ],
     footer: {
