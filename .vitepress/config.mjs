@@ -23,7 +23,7 @@ export default defineConfig({
     head: [
       [
         'script',
-        { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=GTM-NZ4G5TGH' }
+        { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-RCN76ZQ9VN' }
       ],
       [
         'script',
@@ -31,7 +31,7 @@ export default defineConfig({
         `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GTM-NZ4G5TGH');`
+        gtag('config', 'G-RCN76ZQ9VN');`
       ]
     ],
     footer: {
