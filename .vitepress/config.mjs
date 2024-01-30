@@ -21,6 +21,7 @@ export default defineConfig({
       // { text: 'Examples', link: '/markdown-examples' }
     ],
     head: [
+      // 谷歌统计代码
       [
         'script',
         { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-RCN76ZQ9VN' }
@@ -32,7 +33,22 @@ export default defineConfig({
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-RCN76ZQ9VN');`
-      ]
+      ],
+      
+      // 百度统计代码
+      [
+        'script', 
+        {}, 
+        `
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?f43715192be90c17a095ac8388770b67";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        `
+      ],
     ],
     footer: {
       message: 'Powered by <a href="https://vitepress.dev/">Vitepress</a>.',
