@@ -21,21 +21,17 @@ export default defineConfig({
       // { text: 'Examples', link: '/markdown-examples' }
     ],
     head: [
-      ['script', {},
-      `
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?f43715192be90c17a095ac8388770b67";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "jud16drf49");
-      `
+      [
+        'script',
+        { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=GTM-NZ4G5TGH' }
+      ],
+      [
+        'script',
+        {},
+        `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GTM-NZ4G5TGH');`
       ]
     ],
     footer: {
