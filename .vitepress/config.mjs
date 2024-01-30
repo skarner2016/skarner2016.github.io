@@ -21,6 +21,14 @@ export default defineConfig({
       // { text: 'Examples', link: '/markdown-examples' }
     ],
     head: [
+      [
+        'link', 
+        { rel: 'icon', href: '/images/favicon.ico' }
+      ],
+      [
+        'link', 
+        { rel: 'meta', href: '/images/favicon.ico' }
+      ],
       // 谷歌统计代码
       [
         'script',
@@ -36,10 +44,9 @@ export default defineConfig({
       ],
       
       // 百度统计代码
-      [
-        'script', 
-        {}, 
-        `
+      ['script', 
+      {},
+      `
         var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
@@ -47,8 +54,13 @@ export default defineConfig({
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
         })();
-        `
-      ],
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "jud16drf49");
+      `
+      ]
     ],
     footer: {
       message: 'Powered by <a href="https://vitepress.dev/">Vitepress</a>.',
