@@ -72,6 +72,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'PHP8-JIT简介', link: '/php/jit' },
+          { text: 'Laravel/Ocane/Webman性能对比', link: '/php/laravel_octane_webman' },
         ]
       },
       {

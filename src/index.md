@@ -68,5 +68,11 @@ features:
     title: PHP8-JIT
     link: php/jit
     details: PHP8-JIT简介
+
+  - icon:
+      src: /images/icon/php.svg
+    title: Laravel/Ocane/Webman性能对比
+    link: php/laravel_octane_webman
+    details: Laravel/Ocane/Webman性能对比
 ---
 
