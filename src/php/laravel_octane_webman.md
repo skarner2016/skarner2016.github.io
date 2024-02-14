@@ -2,7 +2,7 @@
 
 ## 说明
 - 配置: 12核8G
-- 运行环境: Docker
+- 运行环境: WSL(Docker)
 - 测试方式: 请求直接返回Json
 - PHP版本: 8.2 (未开启opcache)
 - Laravel版本: 10.42.0 (未做任何优化)
