@@ -18,6 +18,11 @@ hero:
   #     link: https://github.com/vuejs/vitepress
 
 features:
+  - icon:
+      src: /images/icon/php.svg
+    title: PHP常见问题
+    link: php/qa
+    details: PHP常见问题
 
   - icon:
       src: /images/icon/php.svg
