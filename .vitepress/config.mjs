@@ -80,17 +80,17 @@ export default defineConfig({
         text: 'MySQL',
         collapsed: false,
         items: [
-          { text: '使用规范', link: '/mysql/standard' },
-          { text: '索引失效', link: '/mysql/index_invalid' },
+          { text: 'MySQL使用规范', link: '/mysql/standard' },
+          { text: 'MySQL索引失效', link: '/mysql/index_invalid' },
           { text: 'MySQL count()函数', link: '/mysql/count' },
-          { text: '主从同步', link: '/mysql/replication' },
+          { text: 'MySQL主从同步', link: '/mysql/replication' },
         ]
       },
       {
         text: 'Redis',
         collapsed: false,
         items: [
-          { text: '使用规范', link: '/redis/standard' },
+          { text: 'Redis使用建议', link: '/redis/standard' },
         ]
       },
       {
@@ -98,7 +98,14 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Ubuntu安装PHP8', link: '/linux/install-php8-on-ubuntu' },
-          { text: '自定义命令别名', link: '/linux/alias' },
+          { text: 'Linux命令别名', link: '/linux/alias' },
+        ]
+      },
+      {
+        text: '就是玩',
+        collapsed: false,
+        items: [
+          { text: 'htpc', link: '/other/htpc' },
         ]
       }
     ],

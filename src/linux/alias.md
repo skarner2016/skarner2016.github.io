@@ -1,6 +1,7 @@
-# 自定义命令别名
+# Linux命令别名
 
 ## git
+
 ```
 alias g="git"
 alias gst="git status"
@@ -39,12 +40,15 @@ alias grshh="git reset HEAD --hard"
 ```
 
 ## php
+
 ```
 alias art="php artisan"
 alias webman="php webman"
 alias webman_start="php start.php start"
 ```
+
 ## docker
+
 ```
 alias dc="docker-compose"
 alias de="docker exec"

@@ -19,66 +19,71 @@ hero:
 
 features:
   - icon:
+      src: /images/icon/other.svg
+    title: HTPC(PT+QB+Jellyfin+Infuse)
+    link: other/htpc
+    details: 2024年6月11日
+
+  - icon:
       src: /images/icon/php.svg
     title: PHP常见问题
     link: php/qa
-    details: PHP常见问题
+    details: 2024年2月19日
 
   - icon:
       src: /images/icon/php.svg
     title: Laravel/Ocane/Webman性能对比
     link: php/laravel_octane_webman
-    details: Laravel/Ocane/Webman性能对比
-    
+    details: 2024年2月14日
+  
   - icon:
       src: /images/icon/mysql.svg
       # alt: VitePress
     title: MySQL主从同步
     # details: MySQL主从同步的配置
     link: /mysql/replication
-    details: MySQL主从同步的配置
+    details: 2024年1月23日
     # linkText: MySQL主从同步
 
   - icon:
       src: /images/icon/mysql.svg
     title: MySQL命名规范
     link: /mysql/standard
-    details: MySQL库、表、字段、索引的命名规范
+    details: 2024年2月14日
 
   - icon:
       src: /images/icon/mysql.svg
     title: MySQL索引失效
     link: /mysql/index_invalid
-    details: MySQL索引失效的情况
+    details: 2024年1月23
 
   - icon:
       src: /images/icon/mysql.svg
-    title: MySQL count()函数
+    title: MySQL count()、count(1)
     link: /mysql/count
-    details: MySQL count(*)、count(1)、count(id)、count(other)效率对比
+    details: 2024年1月23日
 
   - icon:
       src: /images/icon/redis.svg
     title: Redis命名规范
     link: /redis/standard
-    details: Redis命名规范
+    details: 2024年1月23日
 
   - icon:
       src: /images/icon/linux.svg
     title: Ubuntu安装PHP8
     link: linux/install-php8-on-ubuntu
-    details: Ubuntu安装PHP8及扩展的详细步骤
+    details: 2024年1月23日
 
   - icon:
       src: /images/icon/linux.svg
-    title: Linux命令的别名
+    title: Linux命令别名
     link: linux/alias
-    details: Linux命令的别名,包含git、docker等
+    details: 2024年1月23
 
   - icon:
       src: /images/icon/php.svg
-    title: PHP8-JIT
+    title: PHP8-JIT简介
     link: php/jit
-    details: PHP8-JIT简介
+    details: 2024年1月23日
 ---
-

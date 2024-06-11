@@ -1,15 +1,17 @@
-# 我的HTPC(PT+QB+Jellyfin+Infuse)
+# HTPC(PT+QB+Jellyfin+Infuse)
 
-#### 这一套系统我前后折腾了2个月, 为此做了以下工作:
-
+### 为了可以通过公网访问家里的服务器（qb、samba、jellyfin，通过 Infuse连接 jellyfin 完美播放4K 视频）
+### 这一套系统我前后折腾了2个月, 为此做了以下工作:
+- 反复重装了 N 次系统，从 win11 + Ubuntu双系统到 WSL2 反复切换，最终确定了 WSL2 才是最完美方案
 - 换了家里的路由器(为了跑openWRT)
-- 换了家里的宽带(为了公网IP)
-- 额外购置了一个8T移动硬盘(为了做种)
-- 额外购置了10M网线(之前用的USB网卡, 上传/下载跑不满)
-- 整套系统跑在WIN11下WSL的Dokcer中, 附上 dockre-compose.yml
+- 换了家里的宽带(为了公网IP，最后发现公网 IP 不重要，可以用 Tailscale 组网)
+- 额外购置了一个8T移动硬盘(为了做种，玩过 PT 的应该懂)
+- 额外购置了10米网线(之前用的USB网卡, 上传/下载跑不满)
+- 额外购置了智能插头（可通过网关远程开启电脑）
+- 整套系统跑在 WSL2 的 Dokcer 中, 附上 dockre-compose.yml
 
 ```
-version: "2"
+version: "3"
 services:
   qb:
     image: linuxserver/qbittorrent
