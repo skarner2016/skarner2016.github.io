@@ -19,6 +19,12 @@ hero:
 
 features:
   - icon:
+      src: /images/icon/php.svg
+    title: PHP SSE 聊天室
+    link: php/sse_chat
+    details: 2024年6月17日
+
+  - icon:
       src: /images/icon/other.svg
     title: HTPC(PT+QB+Jellyfin+Infuse)
     link: other/htpc

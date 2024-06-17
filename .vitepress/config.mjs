@@ -68,35 +68,18 @@ export default defineConfig({
     },
     sidebar: [
       {
-        text: 'PHP',
+        text: '技术',
         collapsed: false,
         items: [
+          { text: 'PHP SSE聊天室', link: '/php/sse_chat' },
           { text: 'PHP8-JIT简介', link: '/php/jit' },
-          { text: 'Laravel/Ocane/Webman性能对比', link: '/php/laravel_octane_webman' },
+          { text: 'Laravel/Ocane/Webman对比', link: '/php/laravel_octane_webman' },
           { text: 'PHP常见问题', link: '/php/qa' },
-        ]
-      },
-      {
-        text: 'MySQL',
-        collapsed: false,
-        items: [
           { text: 'MySQL使用规范', link: '/mysql/standard' },
           { text: 'MySQL索引失效', link: '/mysql/index_invalid' },
-          { text: 'MySQL count()函数', link: '/mysql/count' },
+          { text: 'MySQL count()效率', link: '/mysql/count' },
           { text: 'MySQL主从同步', link: '/mysql/replication' },
-        ]
-      },
-      {
-        text: 'Redis',
-        collapsed: false,
-        items: [
           { text: 'Redis使用建议', link: '/redis/standard' },
-        ]
-      },
-      {
-        text: 'Linux',
-        collapsed: false,
-        items: [
           { text: 'Ubuntu安装PHP8', link: '/linux/install-php8-on-ubuntu' },
           { text: 'Linux命令别名', link: '/linux/alias' },
         ]
