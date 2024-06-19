@@ -44,23 +44,19 @@ export default defineConfig({
       ],
       
       // 百度统计代码
-      ['script', 
-      {},
-      `
-        var _hmt = _hmt || [];
+      [
+        'script',
+        {},
+        `
+        window._hmt = window._hmt || [];
         (function() {
           var hm = document.createElement("script");
           hm.src = "https://hm.baidu.com/hm.js?f43715192be90c17a095ac8388770b67";
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
         })();
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "jud16drf49");
-      `
-      ]
+        `,
+      ],
     ],
     footer: {
       message: 'Powered by <a href="https://vitepress.dev/">Vitepress</a>.',
