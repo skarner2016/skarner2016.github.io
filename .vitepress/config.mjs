@@ -53,6 +53,7 @@ export default defineConfig({
           var hm = document.createElement("script");
           hm.src = "https://hm.baidu.com/hm.js?f43715192be90c17a095ac8388770b67";
           var s = document.getElementsByTagName("script")[0]; 
+          console.log("hm.baidu.com");
           s.parentNode.insertBefore(hm, s);
         })();
         `,
