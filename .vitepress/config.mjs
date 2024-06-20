@@ -17,8 +17,8 @@ export default defineConfig({
     // logo: '/logo.webp',
     // siteTitle: false,
     nav: [
-      // { text: 'Home', link: '/' },
-      // { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Home', link: '/' },
+      { text: 'Blog', link: '/about_me' }
     ],
     head: [
       [
@@ -28,80 +28,87 @@ export default defineConfig({
       [
         'link', 
         { rel: 'meta', href: '/images/favicon.ico' }
-      ],
-      // 谷歌统计代码
-      [
-        'script',
-        { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-RCN76ZQ9VN' }
-      ],
-      [
-        'script',
-        {},
-        `window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-RCN76ZQ9VN');`
-      ],
-      
+      ],      
       // 百度统计代码
-      [
-        'script',
-        {},
-        `
-        window._hmt = window._hmt || [];
+      ['script', {},
+      `
+        var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
           hm.src = "https://hm.baidu.com/hm.js?f43715192be90c17a095ac8388770b67";
           var s = document.getElementsByTagName("script")[0]; 
-          console.log("hm.baidu.com");
           s.parentNode.insertBefore(hm, s);
         })();
-        `,
-      ],
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "jud16drf49");
+      `
+      ]
     ],
-    footer: {
-      message: 'Powered by <a href="https://vitepress.dev/">Vitepress</a>.',
-      copyright: 'Copyright © 2019-present <a href="https://github.com/skarner2016">Skarner</a>'
-    },
     sidebar: [
-      {
-        text: '技术',
-        collapsed: false,
-        items: [
-          { text: 'PHP SSE聊天室', link: '/php/sse_chat' },
-          { text: 'PHP8-JIT简介', link: '/php/jit' },
-          { text: 'Laravel/Ocane/Webman对比', link: '/php/laravel_octane_webman' },
-          { text: 'PHP常见问题', link: '/php/qa' },
-          { text: 'MySQL使用规范', link: '/mysql/standard' },
-          { text: 'MySQL索引失效', link: '/mysql/index_invalid' },
-          { text: 'MySQL count()效率', link: '/mysql/count' },
-          { text: 'MySQL主从同步', link: '/mysql/replication' },
-          { text: 'Redis使用建议', link: '/redis/standard' },
-          { text: 'Ubuntu安装PHP8', link: '/linux/install-php8-on-ubuntu' },
-          { text: 'Linux命令别名', link: '/linux/alias' },
-        ]
+      { 
+        text: 'AboutMe', 
+        link: '/about_me' 
       },
       {
-        text: '就是玩',
-        collapsed: false,
+        text: "Blog",
         items: [
-          { text: 'htpc', link: '/other/htpc' },
+          {
+            text: '2024',
+            collapsed: false,
+            items: [
+              { text: 'HTPC', link: '/other/htpc' },
+            ]
+          },
+          {
+            text: '2023',
+            collapsed: false,
+            items: [
+              { text: 'PHP SSE聊天室', link: '/php/sse_chat' },
+              { text: 'PHP8-JIT简介', link: '/php/jit' },
+              { text: 'Laravel/Ocane/Webman对比', link: '/php/laravel_octane_webman' },
+              { text: 'PHP常见问题', link: '/php/qa' },
+              { text: 'MySQL使用规范', link: '/mysql/standard' },
+              { text: 'MySQL索引失效', link: '/mysql/index_invalid' },
+              { text: 'MySQL count()效率', link: '/mysql/count' },
+              { text: 'MySQL主从同步', link: '/mysql/replication' },
+              { text: 'Redis使用建议', link: '/redis/standard' },
+              { text: 'Ubuntu安装PHP8', link: '/linux/install-php8-on-ubuntu' },
+              { text: 'Linux命令别名', link: '/linux/alias' },
+            ]
+          }
         ]
       }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/skarner2016' }
     ],
+    // 搜索
     search: {
       provider: 'local'
     },
+    // 文章右侧目录展示级别和标题
+    outline: {
+      level: [2, 6],
+      label: '目录导航'
+    },
+    // 更新时间
     lastUpdated: {
-      text: 'Updated at',
+      text: '最后更新',
       formatOptions: {
         dateStyle: 'full',
         timeStyle: 'medium'
       }
     },
-    docFooter: { prev: '上一篇', next: '下一篇' },
+    docFooter: {
+      prev: '上一篇', 
+      next: '下一篇',
+    },
+    footer: {
+      message: 'Powered by <a href="https://vitepress.dev/">Vitepress</a>.',
+      copyright: 'Copyright © 2019-present <a href="https://github.com/skarner2016">Skarner</a>'
+    },
   }
 })

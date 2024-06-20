@@ -8,7 +8,7 @@ const { Layout } = DefaultTheme
 <template>
   <Layout>
     <template #aside-outline-before>
-      My custom sidebar top content
+      <!-- 目录导航 -->
     </template>
   </Layout>
 </template>
