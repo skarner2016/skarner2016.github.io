@@ -18,6 +18,13 @@ hero:
   #     link: https://github.com/vuejs/vitepress
 
 features:
+
+  - icon:
+      src: /images/icon/other.svg
+    title: 国内可用的dockerhub镜像
+    link: other/docker_registry_mirror
+    details: 2024年7月11日
+
   - icon:
       src: /images/icon/php.svg
     title: PHP SSE 聊天室

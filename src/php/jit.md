@@ -1,6 +1,6 @@
 # PHP8-JIT简介
 
-转载自 [Laruence的博客](https://www.laruence.com/2020/06/27/5963.html)
+截取自 [Laruence的博客](https://www.laruence.com/2020/06/27/5963.html)
 
 ## Opcache和JIT的区别(图)
 ![An image](/images/articles/php_jit.png)
