@@ -59,6 +59,7 @@ export default defineConfig({
             text: '2024',
             collapsed: false,
             items: [
+              { text: '优雅的停止PHP脚本', link: '/php/stop_job' },
               { text: '国内可用的dockerhub镜像', link: '/other/docker_registry_mirror' },
               { text: 'HTPC', link: '/other/htpc' },
             ]

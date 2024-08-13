@@ -20,6 +20,12 @@ hero:
 features:
 
   - icon:
+      src: /images/icon/php.svg
+    title: 优雅的停止PHP脚本
+    link: php/stop_job
+    details: 2024年8月14日
+
+  - icon:
       src: /images/icon/other.svg
     title: 国内可用的dockerhub镜像
     link: other/docker_registry_mirror
