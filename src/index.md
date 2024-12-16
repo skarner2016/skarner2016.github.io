@@ -18,6 +18,11 @@ hero:
   #     link: https://github.com/vuejs/vitepress
 
 features:
+  - icon:
+      src: /images/icon/php.svg
+    title: PHP开发规范
+    link: php/standard
+    details: 2024年12月16日
 
   - icon:
       src: /images/icon/php.svg
