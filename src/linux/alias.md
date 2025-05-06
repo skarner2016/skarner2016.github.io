@@ -3,15 +3,20 @@
 ## git
 
 ```
+CURRENT_VERSION="v2.4.0"
+# git
 alias g="git"
 alias gst="git status"
 alias gc="git commit"
 alias gco="git checkout"
+alias gcoc="git checkout $CURRENT_VERSION"
 alias ga="git add"
 alias gm="git merge"
+alias gmc="git merge $CURRENT_VERSION"
 
 # git pull xx
-alias gloc="git pull origin v2.3.0"
+alias glo="git pull origin"
+alias gloc="git pull origin $CURRENT_VERSION"
 alias glos="git pull origin skarner"
 alias glod="git pull origin dev"
 alias glot="git pull origin test"
@@ -19,7 +24,8 @@ alias glop="git pull origin prepare"
 alias glom="git pull origin master"
 
 # git push xx
-alias gpoc="git push origin v2.3.0"
+alias gpo="git push origin"
+alias gpoc="git push origin $CURRENT_VERSION"
 alias gpos="git push origin skarner"
 alias gpod="git push origin dev"
 alias gpot="git push origin test"
