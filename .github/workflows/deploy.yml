@@ -48,12 +48,10 @@ jobs:
           npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
           touch .vitepress/dist/.nojekyll
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
-      - name: Override old upload-artifact
-        uses: actions/upload-artifact@v4
-        if: false
+
   # 部署工作
   deploy:
     environment:
@@ -65,4 +63,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
