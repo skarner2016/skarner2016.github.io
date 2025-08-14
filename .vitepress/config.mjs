@@ -16,6 +16,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     // logo: '/logo.webp',
     // siteTitle: false,
+    logo: '/images/icon/s.png',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Blog', link: '/about_me' }
@@ -48,10 +49,10 @@ export default defineConfig({
       ]
     ],
     sidebar: [
-      { 
-        text: 'AboutMe', 
-        link: '/about_me' 
-      },
+      // { 
+      //   text: 'AboutMe', 
+      //   link: '/about_me' 
+      // },
       {
         text: "Blog",
         items: [
