@@ -56,6 +56,13 @@ export default defineConfig({
       {
         text: "Blog",
         items: [
+                    {
+            text: '2025',
+            collapsed: false,
+            items: [
+              { text: 'HTPC2.0', link: '/other/htpc2.0' },
+            ]
+          },
           {
             text: '2024',
             collapsed: false,
