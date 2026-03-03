@@ -56,7 +56,14 @@ export default defineConfig({
       {
         text: "Blog",
         items: [
-                    {
+          {
+            text: '2026',
+            collapsed: false,
+            items: [
+              { text: '11分钟宕机教训：Webman 内存泄露排查与性能优化实战', link: '/php/webman_mem_leak' },
+            ]
+          },
+          {
             text: '2025',
             collapsed: false,
             items: [
