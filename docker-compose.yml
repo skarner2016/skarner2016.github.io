@@ -1,0 +1,16 @@
+services:
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: skarner2016-github-io:latest
+    container_name: skarner2016-github-io
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

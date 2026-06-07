@@ -1,0 +1,13 @@
+.github
+.codegraph
+.DS_Store
+Thumbs.db
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vitepress/cache
+.vitepress/dist
+.deploy*
+.idea
